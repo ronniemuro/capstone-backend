@@ -1,0 +1,9 @@
+### Likes Create 
+
+POST http://localhost:3000/likes.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "post_id": 1
+}
