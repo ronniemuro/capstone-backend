@@ -8,4 +8,11 @@ class CommentsController < ApplicationController
     comment.save
     render json: comment.as_json
   end
+
+  def destroy
+    comment_id = params["id"]
+    comment = Comment.find_by(id: comment_id)
+    comment.destroy
+    render json: { message: "Comment deleted" }
+  end
 end

@@ -8,3 +8,7 @@ Content-Type: application/json
   "user_id": 2,
   "comment": "purrrrr"
 }
+
+### Comments Destroy
+
+DELETE http://localhost:3000/comments/5.json
