@@ -27,4 +27,11 @@ class PostsController < ApplicationController
     post.save
     render json: post.as_json
   end
+
+  def destroy
+    post_id = params["id"]
+    post = Post.find_by(id: post_id)
+    post.destroy
+    render json: { message: "Post deleted successfully!" }
+  end
 end
