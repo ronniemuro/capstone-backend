@@ -3,15 +3,15 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "username": "username",
-  "email": "test@test.com",
+  "name": "Test name 3",
+  "username": "username 3",
+  "email": "test3@test.com",
   "password": "password",
   "password_confirmation": "password",
   "profile_pic": "pic.img",
-  "sun": "sun",
-  "moon":"moon",
-  "rising":"rising"
+  "sun": "sun3",
+  "moon":"moon3",
+  "rising":"rising3"
 }
 
 ### Sessions create (login)
