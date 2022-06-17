@@ -1,3 +1,7 @@
 ### Post Index 
 
 GET  http://localhost:3000/posts.json
+
+### Post Show 
+
+GET http://localhost:3000/posts/3.json
