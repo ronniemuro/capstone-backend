@@ -18,4 +18,13 @@ class PostsController < ApplicationController
     post.save
     render json: post.as_json
   end
+
+  def update
+    post_id = params["id"]
+    post = Post.find_by(id: post_id)
+    post.post_content = params["post_content"] || post.post_content
+    post.sign = params["sign"] || post.sign
+    post.save
+    render json: post.as_json
+  end
 end

@@ -15,3 +15,12 @@ Content-Type: application/json
   "post_content": "strawberry moon",
   "sign": "moon"
 }
+
+#### Post Update
+PATCH http://localhost:3000/posts/4.json
+Content-Type: application/json
+
+{
+  "post_content": "strawberry moon 2222",
+  "sign": "rising"
+}
