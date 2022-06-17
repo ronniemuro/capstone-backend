@@ -7,3 +7,8 @@ Content-Type: application/json
   "user_id": 1,
   "post_id": 1
 }
+
+
+### Likes Destroy
+
+DELETE http://localhost:3000/likes/8.json

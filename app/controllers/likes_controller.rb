@@ -7,4 +7,11 @@ class LikesController < ApplicationController
     like.save
     render json: like.as_json
   end
+
+  def destroy
+    like_id = params["id"]
+    like = Like.find_by(id: like_id)
+    like.destroy
+    render json: { message: "Like deleted" }
+  end
 end
