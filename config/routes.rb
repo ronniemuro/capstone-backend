@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   post "/posts" => "posts#create"
   patch "/posts/:id" => "posts#update"
   delete "/posts/:id" => "posts#destroy"
+
+  # Comments Routes
+  post "/comments" => "comments#create"
+  delete "/comments/:id" => "comments#destroy"
+
+  # Likes Routes
+  post "/likes" => "likes#create"
+  delete "/likes/:id" => "likes#destroy"
 end

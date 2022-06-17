@@ -1,0 +1,10 @@
+### Comments Create 
+
+POST http://localhost:3000/comments.json
+Content-Type: application/json
+
+{
+  "post_id": 1,
+  "user_id": 2,
+  "comment": "purrrrr"
+}
