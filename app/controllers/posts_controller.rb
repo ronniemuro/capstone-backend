@@ -8,4 +8,14 @@ class PostsController < ApplicationController
     post = Post.find_by(id: params["id"])
     render json: post.as_json
   end
+
+  def create
+    post = Post.new(
+      user_id: params["user_id"],
+      post_content: params["post_content"],
+      sign: params["sign"],
+    )
+    post.save
+    render json: post.as_json
+  end
 end

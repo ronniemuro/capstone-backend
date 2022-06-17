@@ -5,3 +5,13 @@ GET  http://localhost:3000/posts.json
 ### Post Show 
 
 GET http://localhost:3000/posts/3.json
+
+### Post Create
+POST http://localhost:3000/posts.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "post_content": "strawberry moon",
+  "sign": "moon"
+}
