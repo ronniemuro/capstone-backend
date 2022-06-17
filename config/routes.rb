@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   # Sessions Routes
   post "/sessions" => "sessions#create"
+
+  # Posts Routes
+  get "/posts" => "posts#index"
 end
