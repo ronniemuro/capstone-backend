@@ -15,3 +15,8 @@ Relationship.create(leader_id: 1, follower_id: 3)
 Relationship.create(leader_id: 2, follower_id: 1)
 Relationship.create(leader_id: 2, follower_id: 3)
 Relationship.create(leader_id: 3, follower_id: 2)
+
+Like.create(user_id: 2, post_id: 1)
+Like.create(user_id: 3, post_id: 2)
+Like.create(user_id: 2, post_id: 3)
+Like.create(user_id: 3, post_id: 1)
