@@ -20,3 +20,8 @@ Like.create(user_id: 2, post_id: 1)
 Like.create(user_id: 3, post_id: 2)
 Like.create(user_id: 2, post_id: 3)
 Like.create(user_id: 3, post_id: 1)
+
+Comment.create(post_id: 1, user_id: 2, comment: "love that angel number")
+Comment.create(post_id: 2, user_id: 2, comment: "we have the same moon")
+Comment.create(post_id: 5, user_id: 3, comment: "love me some red")
+Comment.create(post_id: 3, user_id: 3, comment: "i am ready for this!")

@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   has_many :posts
   has_many :likes
-  # has_many :comments
+  has_many :comments
   has_many :leader_relationships, class_name: "Relationship", foreign_key: "follower_id"
   has_many :leaders, through: :leader_relationships, source: :leader
 
