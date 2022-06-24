@@ -3,12 +3,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    render template: "posts/posts/index"
+    render template: "posts/index"
   end
 
   def show
     @post = Post.find_by(id: params["id"])
-    render template: "posts/posts/show"
+    render template: "posts/show"
   end
 
   def create
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     )
     if post.save
       @post = post
-      render template: "posts/posts/show"
+      render template: "posts/show"
     else
       render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     post.sign_type = params["sign_type"] || post.sign_type
     if post.save
       @post = post
-      render template: "posts/posts/show"
+      render template: "posts/show"
     else
       render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
     end

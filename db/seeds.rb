@@ -10,9 +10,9 @@ User.create(name: "Test name", username: "username", email: "test@test.com", pas
 User.create(name: "Test name 2", username: "username2", email: "test2@test.com", password: "password", password_confirmation: "password", profile_pic: "pic.img", sun: "sun2", moon: "moon2", rising: "rising2")
 User.create(name: "Test name 3", username: "username3", email: "test3@test.com", password: "password", password_confirmation: "password", profile_pic: "pic.img", sun: "sun3", moon: "moon3", rising: "rising3")
 
-Post.create(user_id: 1, post_content: "2222", sign: "sun")
-Post.create(user_id: 1, post_content: "4444", sign: "moon")
-Post.create(user_id: 1, post_content: "new moon today!", sign: "rising")
+Post.create(user_id: 1, post_content: "2222", sign_type: "sun", sign: "libra")
+Post.create(user_id: 1, post_content: "4444", sign_type: "moon", sign: "scorpio")
+Post.create(user_id: 1, post_content: "new moon today!", sign_type: "rising", sign: "pisces")
 
 Relationship.create(leader_id: 1, follower_id: 2)
 Relationship.create(leader_id: 1, follower_id: 3)

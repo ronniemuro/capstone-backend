@@ -1,7 +1,7 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTYxODAzMzl9.lOZ3-eOx_Q9qxGJrec1trM_gDRhqIK8Z19Qf6_cW9pM
 ### Post Index 
 
-GET  http://localhost:3000/posts.json?sign=sun
+GET  http://localhost:3000/posts.json
 
 ### Post Show 
 
@@ -14,18 +14,20 @@ Authorization: Bearer {{jwt}}
 
 {
   "user_id": 1,
-  "post_content": "apple moon",
-  "sign": "moon"
+  "post_content": "",
+  "sign_type": "moon",
+  "sign": "pisces"
 }
 
 #### Post Update
-PATCH http://localhost:3000/posts/5.json
+PATCH http://localhost:3000/posts/6.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
   "post_content": "strawberry moon",
-  "sign": "rising"
+  "sign_type": "rising",
+  "sign": "pisces"
 }
 
 ### Post Destroy

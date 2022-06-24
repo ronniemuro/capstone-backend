@@ -4,11 +4,15 @@ class CommentsController < ApplicationController
   def create
     comment = Comment.new(
       post_id: params["post_id"],
-      user_id: params["user_id"],
+      user_id: current_user.id,
       comment: params["comment"],
     )
-    comment.save
-    render json: comment.as_json
+    if comment.save
+      @comment = comment
+      render json: comment.as_json
+    else
+      render json: { errors: comment.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
