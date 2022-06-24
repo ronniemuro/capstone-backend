@@ -1,14 +1,17 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTYxODAzMzl9.lOZ3-eOx_Q9qxGJrec1trM_gDRhqIK8Z19Qf6_cW9pM
 ### Likes Create 
 
 POST http://localhost:3000/likes.json
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "user_id": 1,
-  "post_id": 1
+  "post_id": 3
 }
 
 
 ### Likes Destroy
 
-DELETE http://localhost:3000/likes/8.json
+DELETE http://localhost:3000/likes/5.json
+Authorization: Bearer {{jwt}}

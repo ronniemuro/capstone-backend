@@ -7,4 +7,5 @@ class Post < ApplicationRecord
   validates :post_content, presence: true
   validates :post_content, length: { in: 1..50 }
   validates :sign, presence: true
+  validates :sign_type, presence: true
 end

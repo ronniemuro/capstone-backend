@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user, except: [:index, :show]
+
   def index
     @posts = Post.all
     render template: "posts/posts/index"
@@ -13,6 +15,7 @@ class PostsController < ApplicationController
     post = Post.new(
       user_id: params["user_id"],
       post_content: params["post_content"],
+      sign_type: params["sign_type"],
       sign: params["sign"],
     )
     if post.save
@@ -28,6 +31,7 @@ class PostsController < ApplicationController
     post = Post.find_by(id: post_id)
     post.post_content = params["post_content"] || post.post_content
     post.sign = params["sign"] || post.sign
+    post.sign_type = params["sign_type"] || post.sign_type
     if post.save
       @post = post
       render template: "posts/posts/show"

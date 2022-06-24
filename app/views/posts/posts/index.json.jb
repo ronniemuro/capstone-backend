@@ -4,6 +4,7 @@
     user_id: post.user_id,
     post_content: post.post_content,
     sign: post.sign,
+    sign_type: post.sign_type,
     created_at: post.created_at,
     updated_at: post.updated_at,
   }
