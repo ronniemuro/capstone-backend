@@ -15,9 +15,12 @@ class PostsController < ApplicationController
       post_content: params["post_content"],
       sign: params["sign"],
     )
-    post.save
-    @post = post
-    render template: "posts/posts/show"
+    if post.save
+      @post = post
+      render template: "posts/posts/show"
+    else
+      render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -25,9 +28,12 @@ class PostsController < ApplicationController
     post = Post.find_by(id: post_id)
     post.post_content = params["post_content"] || post.post_content
     post.sign = params["sign"] || post.sign
-    post.save
-    @post = post
-    render template: "posts/posts/show"
+    if post.save
+      @post = post
+      render template: "posts/posts/show"
+    else
+      render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
