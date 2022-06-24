@@ -1,0 +1,10 @@
+@posts.map do |post|
+  {
+    id: post.id,
+    user_id: post.user_id,
+    post_content: post.post_content,
+    sign: post.sign,
+    created_at: post.created_at,
+    updated_at: post.updated_at,
+  }
+end

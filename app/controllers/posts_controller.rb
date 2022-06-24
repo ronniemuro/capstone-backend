@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def index
-    posts = Post.all
-    render json: posts.as_json
+    @posts = Post.all
+    render template: "posts/posts/index"
   end
 
   def show
-    post = Post.find_by(id: params["id"])
-    render json: post.as_json
+    @post = Post.find_by(id: params["id"])
+    render template: "posts/posts/show"
   end
 
   def create
@@ -16,7 +16,8 @@ class PostsController < ApplicationController
       sign: params["sign"],
     )
     post.save
-    render json: post.as_json
+    @post = post
+    render template: "posts/posts/show"
   end
 
   def update
@@ -25,7 +26,8 @@ class PostsController < ApplicationController
     post.post_content = params["post_content"] || post.post_content
     post.sign = params["sign"] || post.sign
     post.save
-    render json: post.as_json
+    @post = post
+    render template: "posts/posts/show"
   end
 
   def destroy
