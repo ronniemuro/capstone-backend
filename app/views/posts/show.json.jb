@@ -1,6 +1,6 @@
 {
   id: @post.id,
-  user_id: @post.user_id,
+  user: @post.user,
   post_content: @post.post_content,
   sign_type: @post.sign_type,
   sign: @post.sign,

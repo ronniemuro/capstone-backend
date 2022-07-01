@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(
-      user_id: params["user_id"],
+      user_id: current_user.id,
       post_content: params["post_content"],
       sign_type: params["sign_type"],
       sign: params["sign"],
