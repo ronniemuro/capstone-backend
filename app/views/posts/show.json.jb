@@ -5,11 +5,9 @@
   sign_type: @post.sign_type,
   sign: @post.sign,
   comments: @post.comments.map do |comment|
-    comment.id
-    comment.post_id
-    comment.user_id
-    comment.comment
-    #this does not work
+    { id: comment.id,
+      user: comment.user,
+      comment: comment.comment }
   end,
   likes: @post.likes,
   created_at: @post.created_at,
