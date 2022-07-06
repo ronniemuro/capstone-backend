@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     )
     if comment.save
       @comment = comment
-      render json: comment.as_json
+      render template: "comments/show"
     else
       render json: { errors: comment.errors.full_messages }, status: :unprocessable_entity
     end

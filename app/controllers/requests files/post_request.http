@@ -5,7 +5,7 @@ GET  http://localhost:3000/posts.json
 
 ### Post Show 
 
-GET http://localhost:3000/posts/3.json
+GET http://localhost:3000/posts/1.json
 
 ### Post Create
 POST http://localhost:3000/posts.json
