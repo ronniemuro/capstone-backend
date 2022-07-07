@@ -25,4 +25,9 @@ Rails.application.routes.draw do
   # Likes Routes
   post "/likes" => "likes#create"
   delete "/likes/:id" => "likes#destroy"
+
+  # Relationships Routes
+  get "/relationships/:id" => "relationships#show"
+  post "/relationships" => "relationships#create"
+  delete "/relationships/:id" => "relationships#destroy"
 end

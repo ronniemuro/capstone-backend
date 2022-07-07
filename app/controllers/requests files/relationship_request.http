@@ -1,0 +1,15 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTczMDgxMDR9.bWaPBb-Vc9EfUJiGHN9CHsvHY98d0aXwtm0PxYnP258
+### Relationship show
+
+GET http://localhost:3000/relationships/1.json
+
+### Relationship create
+
+POST http://localhost:3000/relationships.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "leader_id": "4",
+  "follower_id": "current_user.id"
+}

@@ -14,6 +14,6 @@ class LikesController < ApplicationController
     like_id = params["id"]
     like = Like.find_by(id: like_id)
     like.destroy
-    render json: { message: "Like deleted" }
+    render json: { message: "Unliked successfully" }
   end
 end
