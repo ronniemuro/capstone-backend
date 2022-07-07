@@ -1,3 +1,8 @@
+### User Show
+
+GET http://localhost:3000/users/4.json
+
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
