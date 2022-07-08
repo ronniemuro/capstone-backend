@@ -14,4 +14,10 @@ class User < ApplicationRecord
 
   has_many :follower_relationships, class_name: "Relationship", foreign_key: "leader_id"
   has_many :followers, through: :follower_relationships, source: :follower
+
+  def leader_ids
+    leaders.map do |leader|
+      leader.id
+    end
+  end
 end

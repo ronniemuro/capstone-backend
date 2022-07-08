@@ -2,7 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    user_ids = current_user.leader_ids
+    user_ids << current_user.id
+    @posts = Post.where(user_id: user_ids)
     render template: "posts/index"
   end
 
