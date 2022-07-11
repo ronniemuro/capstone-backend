@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-    #query params
+    @users = User.where("name ILIKE ? OR username ILIKE ?", "%#{params[:search_term]}%", "%#{params[:search_term]}%")
     render template: "users/index"
   end
 
