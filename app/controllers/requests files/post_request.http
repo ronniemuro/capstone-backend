@@ -1,7 +1,9 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTYxODAzMzl9.lOZ3-eOx_Q9qxGJrec1trM_gDRhqIK8Z19Qf6_cW9pM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTc1NDQ2NjF9.8-qr6oYK7msdY6fc1Pd4kIvxmuIoGPnvWcSNwv4mRlc
 ### Post Index 
 
-GET  http://localhost:3000/posts.json
+GET  http://localhost:3000/posts.json?sign+type=sun
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 ### Post Show 
 

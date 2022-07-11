@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # User Routes
   post "/users" => "users#create"
   get "/users/:id" => "users#show"
+  get "/users" => "users#index"
+  patch "/users/:id" => "users#update"
 
   # Sessions Routes
   post "/sessions" => "sessions#create"

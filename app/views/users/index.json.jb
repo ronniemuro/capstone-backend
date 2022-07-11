@@ -1,0 +1,18 @@
+@users.map do |user|
+  {
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    username: user.username,
+    profile_pic: user.profile_pic,
+    sun: user.sun,
+    moon: user.moon,
+    rising: user.rising,
+    posts: user.posts,
+    likes: user.likes,
+    leader_relationships: user.leader_relationships,
+    follower_relationships: user.follower_relationships,
+    created_at: user.created_at,
+    updated_at: user.updated_at,
+  }
+end

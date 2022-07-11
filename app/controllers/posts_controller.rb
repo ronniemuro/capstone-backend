@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     user_ids = current_user.leader_ids
     user_ids << current_user.id
     @posts = Post.where(user_id: user_ids)
+    # @posts = @posts.filter_by_sign_type(params[:sign_type]) if params[:sign_type].present?
     render template: "posts/index"
   end
 

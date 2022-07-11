@@ -1,6 +1,26 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTc1NjY2NTV9.94nk5kWEY6-F4m4QrPPhQBbXKeXhIWZTzda2zK1S1Dk
+
+### User Index
+GET http://localhost:3000/users.json
+
 ### User Show
 
-GET http://localhost:3000/users/4.json
+GET http://localhost:3000/users/1.json
+
+### User Update
+PATCH http://localhost:3000/users/2.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "name": "Two",
+  "username": "two",
+  "email": "two@test.com",
+  "profile_pic": "two.img",
+  "sun": "Pisces",
+  "moon":"Cancer",
+  "rising":"Libra"
+}
 
 
 ### Users create (signup)
@@ -8,15 +28,15 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name 3",
-  "username": "username 3",
-  "email": "test3@test.com",
+  "name": "John",
+  "username": "johnny",
+  "email": "john@test.com",
   "password": "password",
   "password_confirmation": "password",
   "profile_pic": "pic.img",
-  "sun": "sun3",
-  "moon":"moon3",
-  "rising":"rising3"
+  "sun": "Leo",
+  "moon":"Scorpio",
+  "rising":"Aquarius"
 }
 
 ### Sessions create (login)
@@ -24,6 +44,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "test2@test.com",
   "password": "password"
 }
