@@ -39,12 +39,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    response = Cloudinary::Uploader.upload(params[:image_file], {
-      cloud_name: Rails.application.credentials.cloudinary[:cloud_name],
-      api_key: Rails.application.credentials.cloudinary[:api_key],
-      api_secret: Rails.application.credentials.cloudinary[:api_secret],
-    })
-    cloudinary_url = response["secure_url"]
+    if params[:image_file] != ""
+      response = Cloudinary::Uploader.upload(params[:image_file], {
+        cloud_name: Rails.application.credentials.cloudinary[:cloud_name],
+        api_key: Rails.application.credentials.cloudinary[:api_key],
+        api_secret: Rails.application.credentials.cloudinary[:api_secret],
+      })
+      cloudinary_url = response["secure_url"]
+    else
+      cloudinary_url = params[:profile_pic]
+    end
 
     user_id = current_user.id
     user = User.find_by(id: user_id)
